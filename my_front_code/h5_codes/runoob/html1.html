@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+    <script>
+        Math.random()
+    </script>
+</head>
+
+<body>
+    <!--  标题 从 h1 到 h6-->
+    <h1>我的第一个标题</h1>
+    <!-- 用 p 来定义段落 -->
+    <p> 我的第一个段落。</p>
+
+    <!-- 使用a 来定义链接 -->
+    <a href="https://www.runoob.com" id="tips">这是一个链接</a><br>
+    <!-- img 标签来定义图像 -->
+    <img loading="lazy" alt="baidu" src="https://www.baidu.com/img/PCfb_5bf082d29588c07f842ccde3f97243ea.png"
+        width="258" height="39" />
+    <!-- <img loading="lazy" alt = "baidu" src="https://www.baidu.com/img/PCfb_5bf082d29588c07f842ccde3f97243ea.png1" width="258" height="39" /> -->
+
+    <!-- hr 水平线 -->
+
+    <div id="container" style="width:500px">
+
+        <div id="header" style="background-color:#FFA500;">
+            <h1 style="margin-bottom:0;">主要的网页标题</h1>
+        </div>
+
+        <div id="menu" style="background-color:#FFD700;height:200px;width:100px;float:left;">
+            <b>菜单</b><br>
+            HTML<br>
+            CSS<br>
+            JavaScript</div>
+
+        <div id="content" style="background-color:#EEEEEE;height:200px;width:200px;float:left;">
+            内容在这里</div>
+
+        <div id="module3" style="background-color:#EEEEEE;height:200px;width:200px;float:left;">
+            module3</div>
+
+        <div id="footer" style="background-color:#FFA500;clear:both;text-align:center;">
+            版权 © runoob.com</div>
+
+    </div>
+
+    
+    <hr>
+    <!-- 
+        1. HTML 标签对大小写不敏感：<P> 等同于 <p>。许多网站都使用大写的 HTML 标签。 
+        2. HTML 文档由 HTML 元素定义。
+        3. 开始标签，结束标签
+        
+        1. 大多数 HTML 元素可拥有属性
+        2. 属性可以在元素中添加附加信息
+        3. 属性一般描述于开始标签
+        4. 属性总是以名称/值对的形式出现，比如：name="value"。
+        5. 属性中双引号是最常用的，不过使用单引号也没有问题。 在某些个别的情况下，比如属性值本身就含有双引号，那么您必须使用单引号，例如：name='John "ShotGun" Nelson'
+        6. 属性和属性值对大小写不敏感。而新版本的 (X)HTML 要求使用小写属性。
+        7. 适用于大多数 HTML 元素的属性：class、id、style、title
+
+        1. 标题（Heading）是通过 <h1> - <h6> 标签进行定义的。浏览器会自动地在标题的前后添加空行。
+        
+        1. <p>这个<br>段落<br>演示了分行的效果</p>
+        
+        1. 文本格式化：
+            1. <b> <em> <i> <small> <strong> <sub> <sup> <ins> <del>
+            2. <code> <khd> <samp> <var> <pre>
+            3. <abbr> <address> <bdo> <blockquote> <q> <cite> <dfn>
+        
+        1. 链接: target 属性：_blank
+        2. head: 在 <head>元素中你可以插入脚本（scripts）, 样式文件（CSS），及各种meta信息。可以添加在头部区域的元素标签为: <title>, <style>, <meta>, <link>, <script>, <noscript> 和 <base>。
+            1. <title> 标签定义了不同文档的标题。
+            2. <base> 标签描述了基本的链接地址/链接目标，该标签作为HTML文档中所有的链接标签的默认链接:
+            3. <link> 标签定义了文档与外部资源之间的关系。<link> 标签通常用于链接到样式表:
+            4. <style> 标签定义了HTML文档的样式文件引用地址。在<style> 元素中你也可以直接添加样式来渲染 HTML 文档:
+            5. meta标签描述了一些基本的元数据。<meta> 标签提供了元数据.元数据也不显示在页面上，但会被浏览器解析。
+            6. <script> 元素在以后的章节中会详细描述。
+        
+        1. css 如何添加到html中：
+            1. 内联样式- 在HTML元素中使用"style" 属性
+            2. 内部样式表 -在HTML文档头部 <head> 区域使用<style> 元素 来包含CSS
+            3. 外部引用 - 使用外部 CSS 文件
+
+        
+        1. 不建议使用的标签：<font>, <center>, <strike>，不建议使用的属性： color 和 bgcolor.
+        
+        1. alt 属性用来为图像定义一串预备的可替换的文本。
+
+        1. HTML 表格：table tr th td
+        1. HTML 列表：
+            1. 有序列表：ol li
+            2. 无序列表：ul li
+            3. 自定义列表：dl dt dd
+        
+        1. 大多数 HTML 元素被定义为块级元素或内联元素：
+            1. 块级元素在浏览器显示时，通常会以新行来开始（和结束）。实例: <h1>, <p>, <ul>, <table>
+            2. 内联元素在显示时通常不会以新行开始。实例: <b>, <td>, <a>, <img>
+            3. HTML <div> 元素是块级元素，它可用于组合其他 HTML 元素的容器。
+            4. HTML <span> 元素是内联元素，可用作文本的容器
+        
+        1. 网页布局对改善网站的外观非常重要。
+            1. HTML 布局 - 使用<div> 元素
+            2. HTML 布局 - 使用<table> 元素
+        
+        1. 表单用于收集不同类型的用户输入。
+            1. 表单元素是允许用户在表单中输入内容,比如：文本域(textarea)、下拉列表、单选框(radio-buttons)、复选框(checkboxes)等等。表单使用表单标签 <form> 来设置:
+            2. 表单使用表单标签 <form> 来设置:
+            3. 多数情况下被用到的表单标签是输入标签（<input>）。输入类型是由类型属性（type）定义的:
+                1. 文本域（Text Fields）:text password
+                2. 单选按钮（Radio Buttons）: radio
+                3. 复选框（Checkboxes）:checkbox
+                4. 提交按钮(Submit Button): submit
+            4. HTML5新标签: form、input、textarea、label、fieldset、legend、select、optgroup、option、button、datalist、keygen、output、
+
+
+        1. 通过使用框架，你可以在同一个浏览器窗口中显示不止一个页面。
+            1. <iframe loading="lazy" src="demo_iframe.htm" width="200" height="200"></iframe>
+        
+        1. HTML 颜色由红色、绿色、蓝色混合而成。
+
+        1. JavaScript 使 HTML 页面具有更强的动态和交互性。
+            1. <noscript> 标签提供无法使用脚本时的替代内容，比方在浏览器禁用脚本时，或浏览器不支持客户端脚本时。
+            
+
+        1. 速查列表 https://www.runoob.com/html/html-quicklist.html
+        
+
+
+        
+
+
+ 
+
+    -->
+
+
+
+
+
+</body>
+
+</html>

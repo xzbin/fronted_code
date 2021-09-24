@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Vue 测试实例 - 菜鸟教程(runoob.com)</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <style>
+        .class1 {
+            background: #444;
+            color: #eee;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <p>{{ message }}</p>
+        <div v-html="message2"></div>
+
+        <label for="r1">修改颜色</label><input type="checkbox" v-model="use" id="r1">
+        <div v-bind:class="{'class1': use}"> v-bind:class 指令 </div>
+
+        <p>{{ message }}</p>
+        <input v-model="message">
+
+        <a v-bind:href="url">url</a>
+        <br><br>
+        <button v-on:click="change_text">改变文本</button>
+        <br><br>
+        {{ message | reverseString }}
+
+
+        <p v-if="Math.random() > 0.7"> 123 </p>
+        <p v-else> 456 </p>
+
+        <h1 v-show="ok">Hello!</h1>
+        <br><br>
+        <!-- <ul> -->
+        <li v-for="site,index in sites">
+            {{index}} - {{site.name}}
+        </li>
+        <br><br>
+        <li v-for="info, key in object">
+            {{key}} - {{info}}
+        </li>
+        <br><br>
+        <li v-for="n in 3">
+            {{ n }}
+        </li>
+
+        <!-- </ul> -->
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            // el: ".app2",
+            data: {
+                message: 'hello Vue.js!',
+                message2: 'message2 Hello Vue.js!',
+                use: false,
+                url: "http://www.baidu.com",
+                "ok": false,
+                sites: [{
+                        name: 'Runoob'
+                    },
+                    {
+                        name: 'Google'
+                    },
+                    {
+                        name: 'Taobao'
+                    }
+                ],
+                object: {
+                    name: '菜鸟教程',
+                    url: 'http://www.runoob.com',
+                    slogan: '学的不仅是技术，更是梦想！'
+                }
+            },
+            methods: {
+
+                change_text: function () {
+                    this.message = this.message.split('').reverse().join('')
+                }
+            },
+            filters: {
+                reverseString: function (text) {
+                    return text.split('').reverse().join('')
+                },
+
+                capitalize: function (value) {
+                    if (!value) return ''
+                    value = value.toString()
+                    return value.charAt(0).toUpperCase() + value.slice(1)
+                }
+
+            }
+        })
+    </script>
+</body>
+
+</html>

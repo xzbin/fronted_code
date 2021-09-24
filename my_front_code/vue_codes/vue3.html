@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Vue 测试实例 - 菜鸟教程(runoob.com)</title>
+    <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <p>原始字符串: {{ message }}</p>
+        <!-- <p>计算后反转字符串: {{ reversedMessage }}</p> -->
+        <button @click = "counter++" > 点我试试 </button>
+    </div>
+
+    <!-- <p>{{ message }}</p> -->
+    
+
+    <script>
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                message: 'Runoob! abc',
+                name: 'Google',
+                url: 'http://www.google.com',
+                counter: 0
+            },
+            computed: {
+                // methods: {
+                // 计算属性的 getter
+                reversedMessage: function () {
+                    // `this` 指向 vm 实例
+                    return this.message.split('').reverse().join('')
+                },
+                sites: {
+                    get: function () {
+                        return this.name + ' ' + this.url
+                        // self.message = self.message + "123"
+                        // return self.message
+                    },
+                    set: function (newValue) {
+                        var names = newValue.split(' ')
+                        this.name = names[0]
+                        this.url = names[names.length - 1]
+
+                        this.message = newValue + "  123123"
+                        // return self.message
+                    }
+                }
+            }
+        })
+        // vm.sites = '菜鸟教程 http://www.runoob.com';
+        // document.write('name: ' + vm.message);
+        // document.write('<br>');
+        // document.write('url: ' + vm.sites);
+        vm.$watch("counter", function(new_val, old_val){
+            // alert(old_val +" to "+ new_val) 
+            this.message = old_val +" to "+ new_val
+        })
+    </script>
+</body>
+
+</html>
