@@ -47,3 +47,7 @@ https://www.runoob.com/vue2/vue-start.html
 ## Vue.js 样式绑定
 * 我们可以为 v-bind:class 设置一个对象，从而动态的切换 class:
 * 此外，我们也可以在这里绑定返回对象的计算属性。这是一个常用且强大的模式
+
+
+## Vue.js 事件处理器
+* 事件监听可以使用 v-on 指令：
