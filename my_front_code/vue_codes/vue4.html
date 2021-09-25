@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Vue 测试实例 - 菜鸟教程(runoob.com)</title>
+    <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <button v-on:click="say('hi')">Say hi</button>
+        <button v-on:click="say('what')">Say what</button>
+        <button v-on:click="say">Say what123</button>
+
+        <!-- 阻止单击事件冒泡 -->
+        <!-- <a v-on:click.stop="doThis">doThis</a> -->
+
+        <!-- <input v-model.number="age" type="number"> -->
+        <input v-model.trim="age">
+        <p>{{ age }}123</p>
+
+        <runoob1></runoob1>
+
+    </div>
+
+    <script>
+        Vue.component('runoob', {
+            "template": '<h1>自定义组件!</h1>'
+        })
+        new Vue({
+            el: '#app',
+            data: {
+                age: 12321
+            },
+            components: {
+                'runoob1': {
+                    "template": '<h1>自定义组件!</h1>'
+                }
+            },
+            methods: {
+                say: function (message) {
+                    if (typeof message == "object") {
+                        alert(123 + " " + typeof message)
+                    } else {
+                        alert("message")
+                    }
+
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

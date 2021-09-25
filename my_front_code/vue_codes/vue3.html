@@ -11,11 +11,11 @@
     <div id="app">
         <p>原始字符串: {{ message }}</p>
         <!-- <p>计算后反转字符串: {{ reversedMessage }}</p> -->
-        <button @click = "counter++" > 点我试试 </button>
+        <button @click="counter++"> 点我试试 </button>
     </div>
 
     <!-- <p>{{ message }}</p> -->
-    
+
 
     <script>
         var vm = new Vue({
@@ -43,7 +43,6 @@
                         var names = newValue.split(' ')
                         this.name = names[0]
                         this.url = names[names.length - 1]
-
                         this.message = newValue + "  123123"
                         // return self.message
                     }
@@ -54,9 +53,9 @@
         // document.write('name: ' + vm.message);
         // document.write('<br>');
         // document.write('url: ' + vm.sites);
-        vm.$watch("counter", function(new_val, old_val){
+        vm.$watch("counter", function (new_val, old_val) {
             // alert(old_val +" to "+ new_val) 
-            this.message = old_val +" to "+ new_val
+            this.message = old_val + " to " + new_val
         })
     </script>
 </body>
