@@ -34,10 +34,12 @@ from django.urls import include, re_path
 from . import views
  
 urlpatterns = [
-    path('hello/', views.hello),
-    url(r'^$', views.hello),
-    re_path(r'^index/$', views.hello, name='index'),
-    path('runoob/', views.runoob),
+    # path('hello/', views.hello),
+    # url(r'^$', views.hello),
+    # re_path(r'^index/$', views.hello, name='index'),
+    # path('runoob/', views.runoob),
+    path('test/', views.test_json),
+    path('hello/',views.post)
     # re_path(r'^bio/(?P<username>\w+)/$', views.bio, name='bio'),
     # re_path(r'^weblog/', include('blog.urls')),
     # path('/', views.hello)

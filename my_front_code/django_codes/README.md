@@ -43,3 +43,6 @@ path(route, view, kwargs=None, name=None)
 ```
 
 ## Django 模板
+
+## Django 模型
+Django 对各种数据库提供了很好的支持，包括：PostgreSQL、MySQL、SQLite、Oracle。

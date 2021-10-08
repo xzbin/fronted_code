@@ -4,18 +4,49 @@
 <head>
     <meta charset="utf-8">
     <title>菜鸟教程(runoob.com)</title>
-    
+
 </head>
 
 <body>
     <!-- <p>{{ name }}</p> -->
-    <p>{{ views_list }}</p>   
+    <p>{{ views_list }}</p>
     <!-- # 取出整个列表 -->
-    <p>{{ views_list.0 }}</p> 
+    <p>{{ views_list.0 }}</p>
     <p> {{ views_list.0 |lower }} </p>
 
     <p> {{ views_list |first|upper }} </p>
+
+
+    <p>{{ name }}</p>
+    <p> {{ name | default:"菜鸟教程666" }} </p>
+    <p> {{ name | length }} </p>
+    <p> {{ name | filesizeformat }} </p>
+
+    <p> {{ url | safe }} </p>
+
+    <p> num:  {{ num }} </p>
     
+    {%if num > 90 and num <= 100 %}
+    
+    {% elif num > 60 and num <= 90 %}
+    合格
+    {% else %}
+    一边玩去～
+    {% endif %}
+
+
+    <ul>
+        {% for athlete in views_list reversed %}
+            <li>{{ athlete }}</li>
+        {% endfor %}
+    </ul>
+
+
+    <ul>
+        {% for i, athlete in views_dict.items %}
+            <li>{{i}} -----{{ athlete }}</li>
+        {% endfor %}
+    </ul>
 
 
     <!-- # 取出列表的第一个元素 -->
